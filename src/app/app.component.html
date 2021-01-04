@@ -1,0 +1,13 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <orxe-phone-number
+    error-message="Entered number is Invalid"
+    placeholder="Enter number"
+    label-value="Phone number*"
+    grouped-char="-"
+    formControlName="phone"
+    (onChange)="abc($event)"
+  ></orxe-phone-number>
+  <button type="submit">get phone</button>
+</form>
+<div>phone{{ contactForm?.value?.phone }}</div>
+<router-outlet></router-outlet>
