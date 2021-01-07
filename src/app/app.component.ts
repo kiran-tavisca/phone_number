@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 // import '@nextgen-checkout-orxe-components/phone-number';
 import '@nextgen-checkout-orxe-components/phone-number';
+import { from } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,12 +10,14 @@ import '@nextgen-checkout-orxe-components/phone-number';
 })
 export class AppComponent {
   title = 'phone-number-control';
+
   constructor(private fb: FormBuilder, private _cdr: ChangeDetectorRef) { }
   contactForm = this.fb.group(
     {
       phone: [],
     }
   );
+
   abc(event) {
     console.log(event);
   }

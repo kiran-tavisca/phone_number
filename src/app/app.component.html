@@ -5,7 +5,12 @@
     label-value="Phone number*"
     grouped-char="-"
     formControlName="phone"
+    name="phone"
+    value='{"phone":"9353343","country_code":"+358"}'
+    (onBlur)="abc($event)"
     (onChange)="abc($event)"
+    (onFocus)="abc($event)"
+    (onUpdated)="abc($event)"
   ></orxe-phone-number>
   <button type="submit">get phone</button>
 </form>
