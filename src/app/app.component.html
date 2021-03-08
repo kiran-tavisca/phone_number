@@ -1,17 +1,27 @@
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
   <orxe-phone-number
     error-message="Entered number is Invalid"
+    error-message-blank-field="This field is required"
     placeholder="Enter number"
     label-value="Phone number*"
     grouped-char="-"
+    invalid="true"
     formControlName="phone"
     name="phone"
-    value='{"phone":"9353343","country_code":"+358"}'
     (onBlur)="abc($event)"
     (onChange)="abc($event)"
-    (onFocus)="abc($event)"
-    (onUpdated)="abc($event)"
+    value='{"phone":"9353343121","countryCode":"+358"}'
+    required
   ></orxe-phone-number>
+  <!-- <orxe-phone-number
+    error-message="Entered number is Invalid"
+    error-message-blank-field="This field is required"
+    placeholder="Enter number"
+    label-value="Phone number*"
+    formControlName="phone"
+    grouped-char="-"
+    required
+  ></orxe-phone-number> -->
   <button type="submit">get phone</button>
 </form>
 <div>phone{{ contactForm?.value?.phone }}</div>
